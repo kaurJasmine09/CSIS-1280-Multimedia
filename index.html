@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js" defer></script>
+   
     <title>Form Flex</title>
 </head>
 <body>
@@ -326,13 +328,12 @@
                             <div class="container">
                             <h2>Connect with us</h2>
                             <div class="contactussec">
-                            <div class="map">
-                                <div class="address">
-                                    <h3>Force Gym</h3>
-                                    <p>123,block G, xyz place - V3F098</p>
-                                </div>
-                                <img src="" alt>
+                            <div class="map" id="map"></div>
+                            <div class="address">
+                                <h3>Force Gym</h3>
+                                <p>123,block G, xyz place - V3F098</p>
                             </div>
+                            <img src="" alt>
                             <form>
                                 <label for="name">Name</label>
                                 <input type="text" id="name" name="name" placeholder="Name">
@@ -405,6 +406,8 @@
                     <div class="container">Copyright &copy; designed by jasmine and jaspal</div></div>
                 
             </footer>
-    
+            <script
+            src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&v=weekly"
+            async></script>
 </body>
 </html>
