@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="stylesheet" type="text/css" href="css/modalPopUp.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/modalPopUp.css"> -->
     <script src="javascripts/script.js" defer></script>
     <title>Form Flex</title>
 </head>
 <body>
-    <header>
-        <div class="upperheader">
+    <header class="header">
+        <div class="upperheader" id="upperheader">
             <div class="container">
             <a class="logo" href="index.html">Form Flex</a>
             <nav>
@@ -26,7 +26,10 @@
                 <div class="overlay"></div>
                 <div class="container">
                 <h1>Muscle <span>Power</span></h1>
-                <!-- /<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad iusto ipsa doloremque corporis nisi</p> -->
+                <p>Try our fabulous facility, we have muscle training, yoga practice, zumba dance and cardio.<br>
+                    The best trainers for your body transform physically and spritually.  </p>
+                <a href="gym.html" class="btn" >Try now</a>
+                <img class="scroll" src="images/scroll.gif" height="100px">
             </div>
             </div>
     </header>
@@ -325,7 +328,6 @@
                                 <p>Body Building</p>
                             </div>
                         </div>
-                        <a href="#" class="btn">View customer feedback</a>
                     </div>
                     </div>
                         <div class="Cusfeedback" id="testimonial"> 
@@ -359,7 +361,6 @@
                                 <span></span>
                                 <span></span>
                             </div>
-                            <a href="#" class="btn">View customer feedback</a>
                             </div>
                         </div>
                         <div class="contactUs" id="contact">
@@ -371,8 +372,7 @@
                                 width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                             <div class="address">
-                                <h3>Force Gym</h3>
-                                <p>123,block G, xyz place - V3F098</p>
+                                
                             </div>
                             <img src="" alt>
                             <form>
@@ -448,6 +448,25 @@
                     <div class="container">Copyright &copy; designed by jasmine and jaspal</div></div>
                 
             </footer>
+            <div class="pop-up">
+                <div class=""container>
+                    <h2>Join our community now!</h2>
+                <form>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Name" />
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email" />
+                    <label for="comments">Message</label>
+                    <textarea
+                      id="comments"
+                      cols="6"
+                      rows="5"
+                      placeholder="Comments"
+                    ></textarea>
+                    <input type="submit" value="Submit" id="btn" class="btn" />
+                  </form>
+                  </div>
+            </div>
             <div id="customPopup" class="modal">
                 <div class="modal-content">
                     <div class="modal-header">

@@ -13,7 +13,7 @@
 //       map: map,
 //     });
 //   }
-
+  
   var scheduler = function(value){
     
     switch(value)
@@ -155,4 +155,16 @@ function modalPopupOk()
       var modal = document.getElementById("customPopup");
       modal.style.display = "none";
     }, 1000);
+  }
+  
+  window.onscroll = function() {scrollFunc()};
+  function scrollFunc(){
+    if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
+      document.getElementById("upperheader").style.background = "#000",
+      document.getElementById("upperheader").style.boxShadow = "0 1px 5px rgba(0, 0, 0, 0.25)"
+    }
+    else{
+      document.getElementById("upperheader").style.background = "none",
+      document.getElementById("upperheader").style.boxShadow = "none"
+    }
   }
