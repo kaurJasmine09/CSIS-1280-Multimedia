@@ -19,7 +19,7 @@
     switch(value)
     {
       case "mon":
-        document.getElementById("mon").style.display = "block";
+        document.getElementById("mon").style.display = "block",
         document.getElementById("tue").style.display = "none";
         document.getElementById("wed").style.display = "none";
         document.getElementById("thu").style.display = "none";
@@ -134,7 +134,7 @@ form.addEventListener('submit', (event) => {
 
 function modalPopupOk()
   {
-    document.getElementById("popUpBody").innerHTML = "Successfully submitted";
+    document.getElementById("popUpBody").innerHTML = "<div class='content'> <img src='images/tick.gif'/> <br> Successfully submitted</div>";
     document.getElementsByClassName("modalBtnClick")[0].style.display = "none";
     document.getElementsByClassName("modalBtnClick")[1].style.display = "none";
     form.elements['name'].value = "";
@@ -143,28 +143,85 @@ function modalPopupOk()
     setTimeout(() => {
       var modal = document.getElementById("customPopup");
       modal.style.display = "none";
-    }, 1000);
+    }, 3000);
   }
 
   function modalPopupCnl()
   {
-    document.getElementById("popUpBody").innerHTML = "Cancelled. !!";
+    document.getElementById("popUpBody").innerHTML = "<div class='content'> <img src='images/cancelled.gif'/> <br> Cancelled</div>";
     document.getElementsByClassName("modalBtnClick")[0].style.display = "none";
     document.getElementsByClassName("modalBtnClick")[1].style.display = "none";
     setTimeout(() => {
       var modal = document.getElementById("customPopup");
       modal.style.display = "none";
-    }, 1000);
+    }, 3000);
   }
   
   window.onscroll = function() {scrollFunc()};
   function scrollFunc(){
     if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
-      document.getElementById("upperheader").style.background = "#000",
-      document.getElementById("upperheader").style.boxShadow = "0 1px 5px rgba(0, 0, 0, 0.25)"
+      document.getElementById("upperheader").style.background = "#000"
     }
     else{
-      document.getElementById("upperheader").style.background = "none",
-      document.getElementById("upperheader").style.boxShadow = "none"
+      document.getElementById("upperheader").style.background = "none"
     }
   }
+
+
+//smooth scroll
+const links = document.querySelectorAll(".upperheader nav a");
+
+for (const link of links) {
+  link.addEventListener("click", clickHandler);
+}
+
+function clickHandler(e) {
+  e.preventDefault();
+  const href = this.getAttribute("href");
+  const offsetTop = document.querySelector(href).offsetTop - 100;
+
+  scroll({
+    top: offsetTop,
+    behavior: "smooth"
+  });
+}
+
+//hamburger
+(function() {
+
+	let hamburger = {
+		nav: document.querySelector('#nav'),
+		navToggle: document.querySelector('.nav-toggle'),
+
+		initialize() {
+			this.navToggle.addEventListener('click',
+        () => { this.toggle(); });
+		},
+
+		toggle() {
+			this.navToggle.classList.toggle('expanded');
+			this.nav.classList.toggle('expanded');
+		},
+	};
+
+	hamburger.initialize();
+
+}());
+
+let prev;
+console.log(prev)
+setInterval(() => {
+  if(prev != undefined){
+    prev.style.display="none";
+  }
+let rand = Math.floor(Math.random()*3);
+
+let id = "sec"+ rand;
+console.log(id)
+let secId = document.getElementById(id);
+prev = secId;
+secId.style.display="inline-block";
+
+}, 1000);
+
+

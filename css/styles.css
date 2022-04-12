@@ -7,13 +7,15 @@
 /* global css */
 *{box-sizing: border-box;margin:0;padding:0}
 body{font-family: 'Poppins', sans-serif;}
+html{scroll-behavior: smooth;}
 .container{width:80%; margin:0 auto}
 
-.btn{background:#347fe3;padding:0.8em 0.3em;display: inline-block;color:#fff;width:200px;text-align: center;margin-top:20px;border-radius: 50px;}
+.btn{background:#347fe3;padding:0.8em 0.9em;display: inline-block;color:#fff;width:200px;text-align: center;margin-top:20px;border-radius: 50px;}
 .btn:hover{background:linear-gradient(to right, #347fe3, #153053);}
 p{line-height: 1.4;font-size:0.9em;font-weight: 300;}
 a{text-decoration: none;color:#000}
 ul{list-style: none;}
+.bg{background: #000!important}
 
 /* header */
 header{position: relative;}
@@ -21,18 +23,18 @@ header .upperheader{
   display: inline-block;width: 100%;position: fixed;
   transition: all 0.2s ease-in-out;
   height: auto;
-  background-color:transparent;z-index: 2; top: 0;
+  background-color:transparent;z-index: 1; top: 0;
   left: 0;}
 .header.active{background:rgba(0,0,0,0.8); box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25); }
 .logo{color:#fff; font-size: 1.5em;letter-spacing: 3px;font-family: 'Chakra Petch', sans-serif;padding:0.7em 0;float:left}
 header nav{float: right;}
-header nav a{color: #fff;padding:1.5em 1em;display: inline-block}
+header nav a{color: #fff;padding:1.5em 1em;display: inline-block;  transition: all 0.5s ease-out;}
 header nav a:hover{background:#347fe3}
 .banner{text-align: center;background:url("../images/banner2.jpg") no-repeat;background-size: cover;color:#fff;padding:15em 0;position: relative;z-index:0;background-attachment: fixed;}
 .banner h1{font-size: 3em;text-transform: uppercase;text-shadow: 0px 0px 4px #000;line-height:1em}
 .banner h1 span{color: #347fe3;letter-spacing: 3px;}
 .banner p{text-shadow: 0px 0px 3px #000;font-weight: 600;padding:1em;margin-bottom:3em;margin-top:0.5em}
-.scroll{position:absolute;bottom:20px;left:47%;}
+.scroll{position:absolute;bottom:20px;left:50%;margin-left:-50px}
 /* black overlay */
 .overlay{position:absolute; top:0;left:0;width:100%; height:100%;background:rgba(0,0,0,0.3);z-index: -1}
 
@@ -40,14 +42,20 @@ header nav a:hover{background:#347fe3}
 .whatwehave{padding: 2.5em 0;text-align: center;}
 h2{font-size: 2em;font-weight: 400;text-transform: uppercase;}
 .optionsContainer h4{font-weight: 600;margin:8px;color:#fff}
-.optionsContainer p{font-size:0.8em;color:#fff}
 .optionsContainer{display:flex;justify-content: space-between;color:#fff;font-weight: 100;}
-.optionsContainer .box{flex:1;background:#347fe3;margin: 20px;padding:1.5em}
+.optionsContainer .box{flex:1;background:#347fe3;margin: 20px;padding:4em 1.5em;position: relative;border-radius:10px;}
 .optionsContainer .box:nth-child(even){background: #232323}
 .optionsContainer img{height:100px;}
+.overlap{border-radius:10px;visibility:hidden;;padding:1.5em;width:100%;height:1px;bottom:0;position: absolute; left:0;background:linear-gradient(#347fe3, #232323);transition: all 0.5s ease-in-out; }
+.box:hover .overlap{visibility:visible;height:100%;}
+.overlap .btn{font-size:0.8em;width:150px;border:2px solid #fff;background:none;font-weight: 400;}
+.overlap .btn:hover{background:#fff; color:#347fe3;}
+.overlap p{font-size: 0.7em;color:#fff;text-align: center;margin-top:20px;}
+.overlap img{height:50px}
+
 
 /* schedule section home page */
-.schedule{padding: 2.5em 0; background: url(../images/gym.jpg) no-repeat;background-size: cover;background-position:center;text-align: center;position: relative;z-index:0}
+.schedule{padding: 2.5em 0; background: url(../images/gym.jpg) no-repeat;background-size: cover;background-attachment:fixed;background-position:center;text-align: center;position: relative;z-index:0}
 .schedule h2{color:#fff}
 .days{float: left;text-align: left;margin-top:1em}
 .days ul li a{color:#fff;padding:0.8em 0.5em;display: inline-block;width:150px;background:rgba(204,204,204,0.2);margin-bottom:0.7em}
@@ -60,21 +68,21 @@ h2{font-size: 2em;font-weight: 400;text-transform: uppercase;}
 .sections .row h4{text-transform: uppercase;margin-bottom: 10px;}
 
 /* trainer section */
-.trainers{padding: 2.5em 0; background:#efefef;text-align: center;}
+.trainers{padding: 2.5em 0; background:#fff;text-align: center;}
 .trainers .trainersrow{display: flex;}
 .trainersrow .trainersbox{flex:1;padding:1em}
-.trainersbox img{background:#fff; height:200px; width:250px}
+.trainersbox img{background:#fff; height:200px;}
 .trainersrow h4{text-transform: uppercase;margin-top:10px;}
 
 /* cutomer feedback section */
 .Cusfeedback{padding: 4em 0; text-align: center;color:#fff;background:url("../images/customers.png")no-repeat;background-position: bottom;background-size: cover;}
-#sec2, #sec3{display: none;}
+#sec0, #sec1, #sec2{display: none;}
 .Cusfeedback .sec{text-align: center;display: inline-block;width: 60%;padding:20px;}
 .Cusfeedback img{background: #ccc; border-radius: 50%;height:100px;width: 100px;}
 .Cusfeedback p{line-height: 22px;font-size: 0.9em;margin-top:12px;}
 .quotes{position: absolute;font-size: 5em;margin-top:90px;}
 
-/*contact us section */
+/*contact us section*/
 .contactUs{text-align: center;padding: 2.5em 0;}
 .contactUs .map{float: left;text-align: left;flex:1;margin:20px;}
 form{flex:2;padding:20px;}
@@ -87,6 +95,7 @@ form label{vertical-align: top;padding:0 10px 0 0;float: left;}
 /* footer */
 footer{background:#080808;color:#fff;font-size: 0.9em;}
 .upperfooter{display: flex;}
+.footersec a{color:rgba(255,255,255,0.6)}
 .footersec{flex:1;padding:20px}
 .footersec span{flex:1}
 .footersec p{line-height: 1.5;color:#919191}
@@ -98,6 +107,7 @@ footer img{height:20px;margin-right:15px;}
 footer h3{font-size: 1.5em;padding-bottom: 15px;}
 .social img{height:35px;opacity:0.2}
 .social img:hover{opacity:1}
+
 
 /* inner banner styling */
 .innerbanner{position: relative; padding:40em 0 3em 0;background:url("../images/inner-header-gym.jpg") no-repeat #347fe3;background-position:center right;background-size: cover;}
@@ -124,7 +134,7 @@ footer h3{font-size: 1.5em;padding-bottom: 15px;}
 .trainersFlex{display: flex;}
 .trainersDesc p{width:70%}
 .trainersDesc h2{margin: 2em 0 0.5em 0;font-size: 3em;}
-.trainerImgs{flex:1;display: inline-block;}
+.trainerImgs{flex:1;}
 .trainerImgs img{width:400px;}
 
 .safetyStandards{padding: 2.5em 0;text-align: center;background:url("../images/bg.png") no-repeat;background-size:cover;background-position:center;color:#fff}
@@ -141,13 +151,51 @@ footer h3{font-size: 1.5em;padding-bottom: 15px;}
 .visitUs .address h3{margin-top:40px;font-size: 1.2em;}
 .visitUs .address a{display: block}
 .form{display: inline-block;background:#03142b;width: 100%;padding:2.5em;margin-bottom: 0;}
-/* Set the size of the div element that contains the map */
-#map {
-    height: 400px;
-    /* The height is 400 pixels */
-    width: 100%;
-    /* The width is the width of the web page */
-  }
+
+.modal .overlay{background-color: rgba(0,0,0,0.8);}
+
+@media screen and (max-width:720px) {
+  .header p{display: none;}
+  .optionsContainer {display: inline-block}
+  .optionsContainer .box{display: inline-block; width:40%}
+  .days ul{display:inline-block }
+  .days ul li {float:left;width: 150px}
+  .days ul li {margin-right:10px}
+  .days ul li a{float:left}
+  .sections .row{ width:100%}
+  .contactussec{display: inline-block;}
+  .upperfooter{display: block;}
+  .scroll{left:50%;    transform: translate(0, -50%);}
+  .sectionbox{width:40%;margin: 0 10px 10px 0}
+  .membership .cash{float:left;margin-top:20px}
+  .trainersDesc{text-align: center;}
+  .trainersFlex{width: 100%;display: inline-block;}
+  .trainersDesc p{width:100%;margin-bottom:20px;}
+  .trainersDesc h2{margin-top:0}
+  .trainerImgs{text-align: center;}
+  .safetyStandards p{width: 100%;}
+
+
+  
+}
+@media screen and (max-width:450px) {
+  .banner{display:inline-block;width:100%}
+  .optionsContainer .box{display: inline-block;width: 80%}
+  .days {text-align: center;}
+  .trainers .trainersrow{display: block;width:100%}
+  .trainersbox{width:100%}
+  iframe{width:300px;}
+  .sectionbox{width:100%;margin: 0 10px 10px 0}
+.header nav{display: block;float:left;width:100%}
+.header nav a{padding:10px}
+.container{width:100%;padding:20px;margin: 10px 0}
+.innerbanner .desc{top:30%;padding:1em}
+.visitUs{display: block;}
+form input, form textarea{width: 100%;}
+.visitUs .address h2{display: none;}
+
+
+}
 
 
 

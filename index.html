@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <!-- <link rel="stylesheet" type="text/css" href="css/modalPopUp.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/modalPopUp.css"> 
     <script src="javascripts/script.js" defer></script>
     <title>Form Flex</title>
 </head>
@@ -13,7 +13,10 @@
         <div class="upperheader" id="upperheader">
             <div class="container">
             <a class="logo" href="index.html">Form Flex</a>
-            <nav>
+            <div class="nav-toggle">
+                <div class="nav-toggle-bar"></div>
+            </div>
+            <nav id="nav">
                 <a href="#classes">Classes</a>
                 <a href="#schedule">Schedule</a>
                 <a href="#trainers">Trainers</a>
@@ -29,7 +32,7 @@
                 <p>Try our fabulous facility, we have muscle training, yoga practice, zumba dance and cardio.<br>
                     The best trainers for your body transform physically and spritually.  </p>
                 <a href="gym.html" class="btn" >Try now</a>
-                <img class="scroll" src="images/scroll.gif" height="100px">
+                <a href="#classes"><img class="scroll" src="images/scroll.gif" height="100px"></a>
             </div>
             </div>
     </header>
@@ -39,26 +42,43 @@
             <div class="container">
             <h2>What we have</h2>
             <div class="optionsContainer">
-                <a href="gym.html" class="box">
+                <div class="box">
                     <img src="images/dumbbell.png" alt="gym">
                     <h4>Gym</h4>
-                    <p>Facilis nihil ut earum blanditiis neque aliquid! Autem quo repellat id incidunt?</p>
-                </a>
-                <a href="yoga.html" class="box">
+                    <span class="overlap">
+                        <img src="images/dumbbell.png" alt="gym">
+                        <p>Facilis nihil ut earum blanditiis neque aliquid! Autem quo repellat id incidunt?</p>
+                        <a href="gym.html" class="btn">View gym</a>
+                    </span>
+                </div>
+                <div  class="box">
                     <img src="images/mat.png" alt="yoga">
                     <h4>Yoga</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.  aliquid! Autem quo repellat id incidunt?</p>
-                </a>
-                    <a href ="cardio.html"class="box">
+                    <span class="overlap">
+                        <img src="images/mat.png" alt="yoga">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.  aliquid! Autem quo repellat id incidunt?</p>
+                        <a href="yoga.html" class="btn">View yoga</a>
+                    </span>
+                </div>
+            
+                    <div class="box">
                         <img src="images/heart-beat.png" alt="cardio">
                         <h4>Cardio</h4>
-                        <p>Lorem ipsum dolorut earum blanditiis neque aliquid! Autem quo repellat id incidunt?</p>
-                    </a>
-                    <a href="zumba.html" class="box">
+                        <span class="overlap">
+                            <img src="images/heart-beat.png" alt="cardio">
+                            <p>Lorem ipsum dolorut earum blanditiis neque aliquid! Autem quo repellat id incidunt?</p>
+                            <a  href="cardio.html " class="btn">View cardio</a>
+                        </span>
+                    </div>
+                    <div class="box">
                         <img src="images/dancer.png" alt="zumba">
                         <h4>Zumba</h4>
-                        <p>Lorem ipsum dolor sitarum blanditiis neque aliquid! Autem quo repellat id incidunt?</p>
-                    </a>    
+                        <span class="overlap">
+                            <img src="images/dancer.png" alt="zumba">
+                            <p>Lorem ipsum dolor sitarum blanditiis neque aliquid! Autem quo repellat id incidunt?</p>
+                            <a href="zumba.html" class="btn">View zumba</a>
+                        </span>
+                    </div>    
                 </div>
                 </div>
             </div>
@@ -119,11 +139,11 @@
                         <div class="sections" id="tue">
                             <div class="row">
                                 <div class="sectionbox">
-                                        <h4>Body building</h4>
+                                        <h4>Zumba</h4>
                                         <small>06:00 - 08:00</small>
                                     </div>
                                     <div class="sectionbox">
-                                        <h4>----</h4>
+                                        <h4>Body Building</h4>
                                         <small>08:00 - 09:00</small>
                                     </div>
                                     <div class="sectionbox">
@@ -141,11 +161,11 @@
                                         <small>17:00 - 18:00</small>
                                     </div>
                                     <div class="sectionbox">
-                                        <h4>Bhangra</h4>
+                                        <h4>----</h4>
                                         <small>18:00 - 20:00</small>
                                     </div>
                                     <div class="sectionbox">
-                                        <h4>----</h4>
+                                        <h4>Bhangra</h4>
                                         <small>20:00 - 21:00</small>
                                     </div>
                                     <div class="sectionbox">
@@ -157,19 +177,19 @@
                         <div class="sections" id="wed">
                             <div class="row">
                                 <div class="sectionbox">
-                                        <h4>Body building</h4>
+                                        <h4>Crosfit</h4>
                                         <small>06:00 - 08:00</small>
                                     </div>
                                     <div class="sectionbox">
-                                        <h4>----</h4>
+                                        <h4>Zumba</h4>
                                         <small>08:00 - 09:00</small>
                                     </div>
                                     <div class="sectionbox">
-                                        <h4>Crosfit</h4>
+                                        <h4>Body Building</h4>
                                         <small>09:00 - 10:00</small>
                                     </div>
                                     <div class="sectionbox">
-                                        <h4>----</h4>
+                                        <h4>Cardio</h4>
                                         <small>10:00 - 11:00</small>
                                     </div>
                             </div>
@@ -233,11 +253,11 @@
                         <div class="sections" id="fri">
                             <div class="row">
                                 <div class="sectionbox">
-                                        <h4>Body building</h4>
+                                        <h4>Yoga</h4>
                                         <small>06:00 - 08:00</small>
                                     </div>
                                     <div class="sectionbox">
-                                        <h4>----</h4>
+                                        <h4>Weight training</h4>
                                         <small>08:00 - 09:00</small>
                                     </div>
                                     <div class="sectionbox">
@@ -245,7 +265,7 @@
                                         <small>09:00 - 10:00</small>
                                     </div>
                                     <div class="sectionbox">
-                                        <h4>----</h4>
+                                        <h4>Bhangra</h4>
                                         <small>10:00 - 11:00</small>
                                     </div>
                             </div>
@@ -255,7 +275,7 @@
                                         <small>17:00 - 18:00</small>
                                     </div>
                                     <div class="sectionbox">
-                                        <h4>Bhangra</h4>
+                                        <h4>Cardio</h4>
                                         <small>18:00 - 20:00</small>
                                     </div>
                                     <div class="sectionbox">
@@ -271,11 +291,11 @@
                         <div class="sections" id="sat">
                             <div class="row">
                                 <div class="sectionbox">
-                                        <h4>Body building2</h4>
+                                        <h4>Bhangra</h4>
                                         <small>06:00 - 08:00</small>
                                     </div>
                                     <div class="sectionbox">
-                                        <h4>----</h4>
+                                        <h4>Yoga</h4>
                                         <small>08:00 - 09:00</small>
                                     </div>
                                     <div class="sectionbox">
@@ -283,7 +303,7 @@
                                         <small>09:00 - 10:00</small>
                                     </div>
                                     <div class="sectionbox">
-                                        <h4>----</h4>
+                                        <h4>Body Building</h4>
                                         <small>10:00 - 11:00</small>
                                     </div>
                             </div>
@@ -297,7 +317,7 @@
                                         <small>18:00 - 20:00</small>
                                     </div>
                                     <div class="sectionbox">
-                                        <h4>----</h4>
+                                        <h4>Weight Training</h4>
                                         <small>20:00 - 21:00</small>
                                     </div>
                                     <div class="sectionbox">
@@ -335,25 +355,22 @@
                                 <h2>Testimonial</h2>
                             <span class="leftarrow"></span>
                             <span class="quotes">"</span>
+                            <div class="sec" id="sec0">
+                                <img src="images/testimonial1.png" alt="Testimonial">
+                                <p>I have joined the form flex year back and I am stunned <br>with their services mainly body building and personla trainer who helped me to transform myself.  </p>
+                                    <p>- Jacky Minah </p>
+                            </div>
                             <div class="sec" id="sec1">
-                                <img src="images/testimonial.png" alt="Testimonial">
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                                    Tenetur dignissimos placeat cupiditate excepturi veniam, 
-                                    beatae at? Voluptate autem assumenda tenetur. Voluptatibus beatae 
-                                    nulla aspernatur pariatur </p>
+                                <img src="images/testimonial2.png" alt="">
+                                <p>I loved the ambience of the place with so many motivated<br> people and supportive instructors. <br>I enjoyed the zumba classes with jenny the most.</p>
+                                    <p>- Frank Kang </p>
+                            
                             </div>
                             <div class="sec" id="sec2">
-                                <img src="" alt="">
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                                    Tenetur dignissimos placeat cupiditate excepturi veniam, 
-                                    beatae at? Voluptate autem assumenda tenetur. Voluptatibus beatae 
-                                    nulla aspernatur pariatur</p>
-                            </div>
-                            <div class="sec" id="sec3">
-                                <img src="" alt="">
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                                    Tenetur dignissimos placeat cupiditate excepturi veniam, 
-                                    beatae at? Voluptate autem</p>
+                                <img src="images/testimonial3.png" alt="">
+                                <p>Join the place now, they have clean and sanitized equipments and <br>Ijoined different classes bhangra, zumba and cardio. I don't like my bosy stiff so they made weight training corporated with cardio.</p>
+                                    <p>- Karl Raulph </p>
+                            
                             </div>
                             <span class="rightarrow"></span>
                             <div class="dots">
@@ -448,7 +465,7 @@
                     <div class="container">Copyright &copy; designed by jasmine and jaspal</div></div>
                 
             </footer>
-            <div class="pop-up">
+            <div class="pop-up" style="display: none;">
                 <div class=""container>
                     <h2>Join our community now!</h2>
                 <form>
@@ -468,16 +485,17 @@
                   </div>
             </div>
             <div id="customPopup" class="modal">
+                <div class="overlay"></div>
                 <div class="modal-content">
                     <div class="modal-header">
                         <span class="close">&times;</span>
-                        <h2>Modal Header</h2>
+                        <h4>CONFIRM YOUR INFO</h4>
                     </div>
                     <div id="popUpBody" class="modal-body">
                     </div>
                     <div class="modal-footer">
-                      <input  onclick="modalPopupOk()" class="btn modalBtnClick" type="button" value="Ok">
-                      <input onclick="modalPopupCnl()" class="btn modalBtnClick" type="button" value="Cancel">
+                      <input  onclick="modalPopupOk()" class="btn ok modalBtnClick" type="button" value="Ok">
+                      <input onclick="modalPopupCnl()" class="btn cancel modalBtnClick" type="button" value="Cancel">
                     </div>
                 </div>
             </div>
