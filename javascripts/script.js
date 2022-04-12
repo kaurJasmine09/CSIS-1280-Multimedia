@@ -170,27 +170,6 @@ function clickHandler(e) {
   });
 }
 
-//hamburger
-// (function() {
-
-// 	let hamburger = {
-// 		nav: document.querySelector('#nav'),
-// 		navToggle: document.querySelector('.nav-toggle'),
-
-// 		initialize() {
-// 			this.navToggle.addEventListener('click',
-//         () => { this.toggle(); });
-// 		},
-
-// 		toggle() {
-// 			this.navToggle.classList.toggle('expanded');
-// 			this.nav.classList.toggle('expanded');
-// 		},
-// 	};
-
-// 	hamburger.initialize();
-
-// }());
 
 let prev;
 setInterval(() => {
@@ -205,4 +184,21 @@ prev = secId;
 secId.style.display="inline-block";
 
 }, 1000);
+
+
+
+//hamburger menu
+function togglenav(){
+  let nav = document.getElementById("nav");
+  if(nav.style.visibility === "hidden"){
+  nav.style.visibility="visible";
+  nav.style.left = "0";
+  }
+  else{
+    nav.style.visibility = "hidden";
+    nav.style.left = "-100%";
+  
+  }
+}
+
 

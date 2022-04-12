@@ -145,7 +145,7 @@ footer h3{font-size: 1.5em;padding-bottom: 15px;}
 
 .contactbanner{padding:10em 0;background:url("../images/banner.jpg") no-repeat;background-size:cover;background-position:top}
 .visitUs {display: flex;justify-content:space-between;}
-.contactussec{padding:2.5em}
+.contactussec{padding:2.5em 0} 
 .visitUs .map{flex:1}
 .visitUs .address{text-align: left;padding :20px;}
 .visitUs .address h3{margin-top:40px;font-size: 1.2em;}
@@ -154,7 +154,14 @@ footer h3{font-size: 1.5em;padding-bottom: 15px;}
 
 .modal .overlay{background-color: rgba(0,0,0,0.8);}
 
-@media screen and (max-width:720px) {
+/* responsive menu */
+.hamburgerIcon{height:50px; width:50px; display: none;text-align: center;padding:8px}
+.hamburgerIcon span{height: 5px; border-radius: 50px;width:80%; background: #fff;float: left;margin-bottom: 5px;}
+
+@media screen and (max-width:1024px){
+
+}
+@media screen and (max-width:800px) {
   .header p{display: none;}
   .optionsContainer {display: inline-block}
   .optionsContainer .box{display: inline-block; width:40%}
@@ -162,6 +169,8 @@ footer h3{font-size: 1.5em;padding-bottom: 15px;}
   .days ul li {float:left;width: 150px}
   .days ul li {margin-right:10px}
   .days ul li a{float:left}
+  #nav{visibility: hidden;background:#000;transition: all 0.5s ease-in-out;position: absolute;;top:90px;padding:15px}
+  #nav a{width: 100%;}
   .sections .row{ width:100%}
   .contactussec{display: inline-block;}
   .upperfooter{display: block;}
@@ -189,11 +198,15 @@ footer h3{font-size: 1.5em;padding-bottom: 15px;}
   .banner{display:inline-block;width:100%}
   .optionsContainer .box{display: inline-block;width: 80%}
   .days {text-align: center;}
+  .hamburgerIcon{display: inline-block;position:absolute; top:30px;right:10px;}
   .trainers .trainersrow{display: block;width:100%}
   .trainersbox{width:100%}
   iframe{width:300px;}
-  .sectionbox{width:100%;margin: 0 10px 10px 0}
-.header nav{display: block;float:left;width:100%}
+  .days{overflow-y:hidden!important;overflow-x: scroll!important;white-space:nowrap!important;max-height:50px;}
+  .whatwehave{padding:2.5em 0}
+  .sections .row{display: inline;}
+  .sectionbox{padding:1.5em 0 ;margin:10px 10px 0}
+  .header nav{display: block;float:left;width:100%}
 .header nav a{padding:10px}
 .container{width:100%;padding:20px;margin: 10px 0}
 .innerbanner .desc{top:30%;padding:1em}
@@ -201,6 +214,10 @@ footer h3{font-size: 1.5em;padding-bottom: 15px;}
 form input, form textarea{width: 100%;}
 .visitUs .address h2{display: none;}
 
+
+}
+
+@media screen and (max-width:420px) {
 
 }
 
