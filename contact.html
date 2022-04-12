@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/modalPopUp.css" />
+    <script src="javascripts/contactscript.js" defer></script>
     <title>Form Flex</title>
   </head>
   <body>
@@ -132,5 +134,20 @@
         </div>
       </div>
     </footer>
+    <div id="customPopup" class="modal">
+      <div class="overlay"></div>
+      <div class="modal-content">
+          <div class="modal-header">
+              <span class="close">&times;</span>
+              <h4>CONFIRM YOUR INFO</h4>
+          </div>
+          <div id="popUpBody" class="modal-body">
+          </div>
+          <div class="modal-footer">
+            <input  onclick="modalPopupOk()" class="btn ok modalBtnClick" type="button" value="Ok">
+            <input onclick="modalPopupCnl()" class="btn cancel modalBtnClick" type="button" value="Cancel">
+          </div>
+      </div>
+  </div>
   </body>
 </html>

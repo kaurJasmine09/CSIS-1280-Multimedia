@@ -173,7 +173,14 @@ footer h3{font-size: 1.5em;padding-bottom: 15px;}
   .trainersDesc p{width:100%;margin-bottom:20px;}
   .trainersDesc h2{margin-top:0}
   .trainerImgs{text-align: center;}
+  .safetyStandards{width:100%}
+  .safetyStandards .row{display: inline-block;width:100%}
   .safetyStandards p{width: 100%;}
+  .safetyStandards .sectionbox{width: 100%;}
+  .visitUs{display: block;}
+  form input, form textarea{width: 100%;}
+
+
 
 
   

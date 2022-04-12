@@ -1,19 +1,3 @@
-// Initialize and add the map
-// function initMap() {
-//     // The location of Uluru
-//     const uluru = { lat: -25.344, lng: 131.036 };
-//     // The map, centered at Uluru
-//     const map = new google.maps.Map(document.getElementById("map"), {
-//       zoom: 4,
-//       center: uluru,
-//     });
-//     // The marker, positioned at Uluru
-//     const marker = new google.maps.Marker({
-//       position: uluru,
-//       map: map,
-//     });
-//   }
-  
   var scheduler = function(value){
     
     switch(value)
@@ -187,29 +171,28 @@ function clickHandler(e) {
 }
 
 //hamburger
-(function() {
+// (function() {
 
-	let hamburger = {
-		nav: document.querySelector('#nav'),
-		navToggle: document.querySelector('.nav-toggle'),
+// 	let hamburger = {
+// 		nav: document.querySelector('#nav'),
+// 		navToggle: document.querySelector('.nav-toggle'),
 
-		initialize() {
-			this.navToggle.addEventListener('click',
-        () => { this.toggle(); });
-		},
+// 		initialize() {
+// 			this.navToggle.addEventListener('click',
+//         () => { this.toggle(); });
+// 		},
 
-		toggle() {
-			this.navToggle.classList.toggle('expanded');
-			this.nav.classList.toggle('expanded');
-		},
-	};
+// 		toggle() {
+// 			this.navToggle.classList.toggle('expanded');
+// 			this.nav.classList.toggle('expanded');
+// 		},
+// 	};
 
-	hamburger.initialize();
+// 	hamburger.initialize();
 
-}());
+// }());
 
 let prev;
-console.log(prev)
 setInterval(() => {
   if(prev != undefined){
     prev.style.display="none";
@@ -217,11 +200,9 @@ setInterval(() => {
 let rand = Math.floor(Math.random()*3);
 
 let id = "sec"+ rand;
-console.log(id)
 let secId = document.getElementById(id);
 prev = secId;
 secId.style.display="inline-block";
 
 }, 1000);
-
 

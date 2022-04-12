@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <title>gym</title>
+    <link rel="stylesheet" type="text/css" href="css/modalPopUp.css">
+    <script src="javascripts/gymscript.js" defer></script>
+    <script src="javascripts/gymscript.js" defer></script>
+    <title>Gym</title>
 </head>
 <body>
     <header>
@@ -59,7 +62,7 @@
                 </div>
                 <div class="container">
                     <a href="#" class="btn">Get membership</a>
-                    
+                    <input type="submit" onclick="fillData()" value="Get membership" id="btn" class="btn" />
                     </div>        
         </div>
         </div>
@@ -166,6 +169,34 @@
                     <div class="container">Copyright &copy; designed by jasmine and jaspal</div></div>
                 
             </footer>
+
+            <div id="customPopup" class="modal"style="display: none;">
+                <div class="overlay"></div>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">&times;</span>
+                        <h2>Join our community now!</h2>
+                    </div>
+                    <div id="popUpBody1" class="modal-body"></div>
+                    <div id="popUpBody2" class="modal-body">
+                        <form>
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Name" />
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Email" />
+                            <label for="price">Price</label>
+                            <select id="price" name="price">
+                                <option label="ThreeMonth">$439-3 Months</option>
+                                <option label="TenClasses">$169-10 Classes</option>
+                                <option label="SingleDrop">Single Drop-IN</option>
+                            </select>
+                            <div class="modal-footer">
+                            <input type="submit" value="Submit" id="btn" class="btn" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
     
 </body>
 </html>
