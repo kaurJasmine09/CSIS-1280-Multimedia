@@ -75,7 +75,7 @@ h2{font-size: 2em;font-weight: 400;text-transform: uppercase;}
 .trainersrow h4{text-transform: uppercase;margin-top:10px;}
 
 /* cutomer feedback section */
-.Cusfeedback{padding: 4em 0; text-align: center;color:#fff;background:url("../images/customers.png")no-repeat;background-position: bottom;background-size: cover;}
+.Cusfeedback{padding: 4em 0; text-align: center;color:#fff;background:url("../images/customers.png") no-repeat;background-position: bottom;background-size: cover;}
 #sec0, #sec1, #sec2{display: none;}
 .Cusfeedback .sec{text-align: center;display: inline-block;width: 60%;padding:20px;}
 .Cusfeedback img{background: #ccc; border-radius: 50%;height:100px;width: 100px;}
