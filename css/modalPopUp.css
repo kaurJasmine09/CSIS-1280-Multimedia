@@ -76,9 +76,17 @@
   .modal .btn{width:100px;box-shadow: none;outline: none;margin-left:10px}
   .modal .ok{background-color: rgb(94, 194, 94);}
   .modal .ok:hover{background: green!important}
-  
+  #popUpBody2 .btn{float:right}
+  #popUpBody2 .modal-footer{padding:2px 0 }
   .modal .cancel{background-color: lightcoral;}
   .modal .cancel:hover{background: #f00!important;}
 
   .modal img{height:80px;margin-bottom: 20px;}
   .content{text-align: center;}
+
+
+
+  
+  @media screen and (max-width:450px) {
+  .modal-content{width:80%}
+  }

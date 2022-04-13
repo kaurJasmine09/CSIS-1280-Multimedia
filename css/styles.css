@@ -10,7 +10,7 @@ body{font-family: 'Poppins', sans-serif;}
 html{scroll-behavior: smooth;}
 .container{width:80%; margin:0 auto}
 
-.btn{background:#347fe3;padding:0.8em 0.9em;display: inline-block;color:#fff;width:200px;text-align: center;margin-top:20px;border-radius: 50px;}
+.btn{border:none;background:#347fe3;padding:0.8em 0.9em;display: inline-block;color:#fff;width:200px;text-align: center;margin-top:20px;border-radius: 50px;}
 .btn:hover{background:linear-gradient(to right, #347fe3, #153053);}
 p{line-height: 1.4;font-size:0.9em;font-weight: 300;}
 a{text-decoration: none;color:#000}
@@ -88,8 +88,9 @@ h2{font-size: 2em;font-weight: 400;text-transform: uppercase;}
 form{flex:2;padding:20px;}
 form label{text-align: left;padding:1em;font-size: 0.8em;margin-bottom:5px;width:100%}
 .contactussec{display: flex}
-form input{height:50px}
-form input, form textarea{width:80%;float: left;margin-bottom:15px;padding:10px;}
+form input, form select{height:50px}
+form input, form textarea, form select{width:100%;float: left;margin-bottom:15px;padding:10px;}
+form select{padding-right:10px}
 form label{vertical-align: top;padding:0 10px 0 0;float: left;} 
 
 /* footer */
@@ -153,6 +154,7 @@ footer h3{font-size: 1.5em;padding-bottom: 15px;}
 .form{display: inline-block;background:#03142b;width: 100%;padding:2.5em;margin-bottom: 0;}
 
 .modal .overlay{background-color: rgba(0,0,0,0.8);}
+.membershipContainer .btn{padding: 1.2em 0.5em}
 
 /* responsive menu */
 .hamburgerIcon{height:50px; width:50px; display: none;text-align: center;padding:8px}
@@ -188,6 +190,7 @@ footer h3{font-size: 1.5em;padding-bottom: 15px;}
   .safetyStandards .sectionbox{width: 100%;}
   .visitUs{display: block;}
   form input, form textarea{width: 100%;}
+  .safetyStandards .sectionbox{margin:10px 0}
 
 
 
@@ -202,13 +205,14 @@ footer h3{font-size: 1.5em;padding-bottom: 15px;}
   .trainers .trainersrow{display: block;width:100%}
   .trainersbox{width:100%}
   iframe{width:300px;}
-  .days{overflow-y:hidden!important;overflow-x: scroll!important;white-space:nowrap!important;max-height:50px;}
+  /* .days{overflow-y:hidden!important;overflow-x: scroll!important;white-space:nowrap!important;max-height:50px;} */
   .whatwehave{padding:2.5em 0}
   .sections .row{display: inline;}
   .sectionbox{padding:1.5em 0 ;margin:10px 10px 0}
   .header nav{display: block;float:left;width:100%}
 .header nav a{padding:10px}
 .container{width:100%;padding:20px;margin: 10px 0}
+.trainerImgs img{width:300px}
 .innerbanner .desc{top:30%;padding:1em}
 .visitUs{display: block;}
 form input, form textarea{width: 100%;}
